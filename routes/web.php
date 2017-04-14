@@ -15,4 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('phrf', 'CalculatorController@create')->name('calculator');
+Route::get('calculator', function () {
+  return view('calculator');
+});
