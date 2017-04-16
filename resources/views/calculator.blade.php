@@ -5,6 +5,11 @@
 
 @section('content')
 <style type="text/css">
+  #time-header { margin-bottom: 1px; }
+  #clock-info {
+    font-size: 12px;
+    margin-top:5px;
+  }
   .time .control-label, .calc .control-label {font-weight: 400;}
   .form-control  {display: inline;}
   .time .form-control {width:70px; }
@@ -26,15 +31,16 @@
 
       <!-- ELAPSED TIME -->
       <hr>
-      <h5>Elapsed Time</h5>
+      <h5 id="time-header">Elapsed Time</h5>
+      <p id="clock-info">24-hour Clock</p>
 
       <form class="form-horizontal">
         <!-- START TIME -->
         <div class="form-group time">
           <label class="col-sm-2 control-label">Start Time</label>
-          <input type="text" class="form-control" name="st-hours" placeholder="12" maxlength="2">:
-          <input type="text" class="form-control" name="st-minutes" placeholder="00" maxlength="2">:
-          <input type="text" class="form-control" name="st-seconds" placeholder="05" maxlength="2">
+          <input type="text" class="form-control" name="st-hours" value="12" maxlength="2">:
+          <input type="text" class="form-control" name="st-minutes" value="00" maxlength="2">:
+          <input type="text" class="form-control" name="st-seconds" value="00" maxlength="2">
           <span class="units offset">hh:mm:ss</span>
         </div>
 
@@ -46,10 +52,11 @@
           <input type="text" id="fn-seconds" class="form-control" name="fn-seconds" value="59" maxlength="2">
           <span class="units offset">hh:mm:ss</span>
         </div>
-        
+
         <div class="form-group">
           <div class="col-sm-2 col-sm-offset-2">
             <input type="button" id="elapsed" class="btn btn-default" value="Elapsed Time">
+
           </div>
         </div>
 
@@ -60,42 +67,36 @@
       <hr>
       <h5>Calculator</h5>
       <form class="form-horizontal">
-<!-- 
-          <div class="form-group calc">
-            <label class="col-sm-2 control-label" for="distance">Elapsed Time</label>
-              <input type="text" id="distance" class="form-control" name="distance" placeholder="14:34:50">
-              <span class="units offset">hh:mm:ss</span>
-          </div>
- -->
-          <div class="form-group time">
-            <label class="col-sm-2 control-label">Elapsed Time</label>
-            <input type="text" class="form-control" name="hours" value="9" min="0" max="23">:
-            <input type="text" class="form-control" name="minutes" value="34" min="0" max="59">:
-            <input type="text" class="form-control" name="seconds" value="59" min="0" max="59">
-            <span class="units offset">hh:mm:ss</span>
-          </div>
-
-          <div class="form-group calc">
-            <label class="col-sm-2 control-label" for="distance">Distance</label>
-            <!-- <div class="col-sm-3"> -->
-              <input type="text" id="distance" class="form-control " name="distance" placeholder="9.5">
-              <span class="units offset">miles</span>
-            <!-- </div> -->
-          </div>
-
-          <div class="form-group calc">
-            <label class="col-sm-2 control-label" for="rating">PHRF Rating</label>
-            <!-- <div class="col-sm-3"> -->
-              <input type="text" id="rating" class="form-control" name="rating" placeholder="108">
-            <!-- </div> -->
-          </div>
+        <!-- TIME -->
+        <div class="form-group time">
+          <label class="col-sm-2 control-label">Elapsed Time</label>
+          <input type="text" class="form-control" name="hours" placeholder="00" min="0" max="23">:
+          <input type="text" class="form-control" name="minutes" placeholder="00" min="0" max="59">:
+          <input type="text" class="form-control" name="seconds" placeholder="00" min="0" max="59">
+          <span class="units offset">hh:mm:ss</span>
+        </div>
+        <!-- DISTANCE -->
+        <div class="form-group calc">
+          <label class="col-sm-2 control-label" for="distance">Distance</label>
+          <!-- <div class="col-sm-3"> -->
+            <input type="text" id="distance" class="form-control " name="distance" placeholder="9.5">
+            <span class="units offset">miles</span>
+          <!-- </div> -->
+        </div>
+        <!-- RATING -->
+        <div class="form-group calc">
+          <label class="col-sm-2 control-label" for="rating">Rating</label>
+          <!-- <div class="col-sm-3"> -->
+            <input type="text" id="rating" class="form-control" name="rating" placeholder="108">
+          <!-- </div> -->
+        </div>
 
 
-          <div class="form-group">
-            <div class="col-sm-2 col-sm-offset-2">
-              <button type="submit" class="btn btn-default">Calculate</button>
-            </div>
+        <div class="form-group">
+          <div class="col-sm-2 col-sm-offset-2">
+            <button type="submit" class="btn btn-default">Calculate</button>
           </div>
+        </div>
 
       </form>
     </div>
