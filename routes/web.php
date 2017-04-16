@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('calculator', function () {
-  return view('calculator');
-});
+Route::get('distance', 'TimeOnDistanceController@create')->name('tod');
+Route::post('distance', 'TimeOnDistanceController@store')->name('tod');
+
+Route::get('time', 'TimeOnTimeController@create')->name('tot');
+Route::post('time', 'TimeOnTimeController@create')->name('tot');
