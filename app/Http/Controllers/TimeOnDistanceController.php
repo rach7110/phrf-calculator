@@ -22,7 +22,14 @@ class TimeOnDistanceController extends Controller
 
     $tod->corrected_time = $tod->corrected_time();
 
-    return view('TimeOnDistance.show', ['tod' => $tod]);
+    $elapsed_time_formatted = gmdate("H:i:s", $tod->elapsed_time);
+    $corrected_time_formatted = gmdate("H:i:s", $tod->corrected_time);
+
+    return view('TimeOnDistance.show', [
+      'tod' => $tod, 
+      'corrected_formatted' => $corrected_time_formatted, 
+      'elapsed_formatted' => $elapsed_time_formatted
+      ]);
 
   }
 
