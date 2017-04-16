@@ -8,10 +8,10 @@
     <p>Boat's Rating: {{$tod->rating}}</p>
 
     <p>Elapsed Time: {{$elapsed_formatted}}</p>
-    <p>{{$tod->elapsed_time}} seconds</p>
+    <p class="small">{{$tod->elapsed_time}} seconds</p>
 
     <p>Corrected Time: {{$corrected_formatted}} </p>
-    <p>{{$tod->corrected_time}} seconds</p>
+    <p class="small">{{$tod->corrected_time}} seconds</p>
 
     <a href="{{route('tod')}}"><button class="btn btn-default">New Time On Distance</button>
 
