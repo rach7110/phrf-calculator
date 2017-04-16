@@ -22,7 +22,9 @@ $(document).ready(function() {
     $('[name="seconds"]').val(elapsed_time.seconds);
     $('[name="minutes"]').val(elapsed_time.minutes);
     $('[name="hours"]').val(elapsed_time.hours);
-    $('[name="total_seconds"]').val(elapsed_time.total);
+    $('#total_seconds').attr('value', elapsed_time.total);
+
+    console.log(typeof(elapsed_time.total));
   });
 });
 

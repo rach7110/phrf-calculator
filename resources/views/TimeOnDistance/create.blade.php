@@ -75,7 +75,8 @@
       <!-- TIME OF DISTANCE CALCULATOR: -->
       <hr>
       <h5>Calculator</h5>
-      <form class="form-horizontal">
+      <form class="form-horizontal" action="{{route('tod')}}" method="post">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <!-- TIME -->
         <div class="form-group time">
           <label class="col-sm-2 control-label">Elapsed Time</label>
@@ -102,7 +103,6 @@
             <input type="number" id="rating" class="form-control" name="rating" placeholder="108" required>
           <!-- </div> -->
         </div>
-
 
         <div class="form-group">
           <div class="col-sm-2 col-sm-offset-2">

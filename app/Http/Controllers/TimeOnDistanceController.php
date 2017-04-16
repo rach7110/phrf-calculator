@@ -13,16 +13,16 @@ class TimeOnDistanceController extends Controller
     return view('TimeOnDistance.create');
   }
 
-  public function store () {
+  public function store (Request $request) {
     $tod = new TimeOnDistance;
 
-    $tod->rating = Request::get('rating');
-    $tod->distance = Request::get('distance');
-    $tod->elapsed_time = Request::get('elapsed_time');
+    $tod->rating = intval($request->input('rating'));
+    $tod->distance = intval($request->input('distance'));
+    $tod->elapsed_time = intval($request->input('total_seconds'));
 
-    $this->$corrected_time = $tod->corrected_time();
+    $tod->corrected_time = $tod->corrected_time();
 
-    return view();
+    return view('TimeOnDistance.show', ['tod' => $tod]);
 
   }
 
