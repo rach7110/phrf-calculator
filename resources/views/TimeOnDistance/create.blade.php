@@ -4,30 +4,6 @@
 @endsection
 
 @section('content')
-<style type="text/css">
-  #time-header { margin-bottom: 1px; }
-  #clock-info {
-    font-size: 12px;
-    margin-top:5px;
-  }
-  .time .control-label, .calc .control-label {font-weight: 400;}
-  .form-control  {display: inline;}
-  .time .form-control {width:70px; }
-  .calc .form-control {width:140px; }
-  .time .control-label, .calc .control-label {margin-right: 15px;}
-  .units { font-size: 14px}
-  .units.offset  {margin-left: 5px;}
-
-  /*hide arrows in number input fields*/
-  input[type=number]::-webkit-inner-spin-button, 
-  input[type=number]::-webkit-outer-spin-button { 
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      margin: 0; 
-  }
-  
-</style>
 
   <div class="panel panel-default">
     <div class="panel-heading">
