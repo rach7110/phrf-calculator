@@ -17,6 +17,15 @@
   .time .control-label, .calc .control-label {margin-right: 15px;}
   .units { font-size: 14px}
   .units.offset  {margin-left: 5px;}
+
+  /*hide arrows in number input fields*/
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      margin: 0; 
+  }
   
 </style>
 
@@ -78,12 +87,11 @@
 
         <input type=number id="total_seconds" name="total_seconds" hidden >
 
-
         <!-- DISTANCE -->
         <div class="form-group calc">
           <label class="col-sm-2 control-label" for="distance">Distance</label>
           <!-- <div class="col-sm-3"> -->
-            <input type="text" id="distance" class="form-control " name="distance" placeholder="9.5">
+            <input type="number" id="distance" class="form-control " name="distance" placeholder="9.5" min=0 required>
             <span class="units offset">miles</span>
           <!-- </div> -->
         </div>
@@ -91,7 +99,7 @@
         <div class="form-group calc">
           <label class="col-sm-2 control-label" for="rating">Rating</label>
           <!-- <div class="col-sm-3"> -->
-            <input type="text" id="rating" class="form-control" name="rating" placeholder="108">
+            <input type="number" id="rating" class="form-control" name="rating" placeholder="108" required>
           <!-- </div> -->
         </div>
 
