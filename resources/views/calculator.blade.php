@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('title')
-  Get Started
 @endsection
 
 @section('content')
@@ -13,14 +12,7 @@
   .time .control-label, .calc .control-label {margin-right: 15px;}
   .units { font-size: 14px}
   .units.offset  {margin-left: 5px;}
-  /* Hide HTML5 Up and Down arrows. */
-  input[type=number]::-webkit-inner-spin-button, 
-  input[type=number]::-webkit-outer-spin-button { 
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      margin: 0; 
-  }
+  
 </style>
 
   <div class="panel panel-default">
@@ -40,24 +32,24 @@
         <!-- START TIME -->
         <div class="form-group time">
           <label class="col-sm-2 control-label">Start Time</label>
-          <input type="number" class="form-control" name="st-hours" placeholder="9" min="0" max="23">:
-          <input type="number" class="form-control" name="st-minutes" placeholder="34" min="0" max="59">:
-          <input type="number" class="form-control" name="st-seconds" placeholder="59" min="0" max="59">
+          <input type="text" class="form-control" name="st-hours" placeholder="12" maxlength="2">:
+          <input type="text" class="form-control" name="st-minutes" placeholder="00" maxlength="2">:
+          <input type="text" class="form-control" name="st-seconds" placeholder="05" maxlength="2">
           <span class="units offset">hh:mm:ss</span>
         </div>
 
         <!-- END TIME -->
         <div class="form-group time">
           <label class="col-sm-2 control-label">End Time</label>
-          <input type="number" class="form-control" name="fn-hours" placeholder="9" min="0" max="23">:
-          <input type="number" class="form-control" name="fn-minutes" placeholder="34" min="0" max="59">:
-          <input type="number" class="form-control" name="fn-seconds" placeholder="59" min="0" max="59">
+          <input type="text" class="form-control" name="fn-hours" value="13" maxlength="2">:
+          <input type="text" class="form-control" name="fn-minutes" value="34" maxlength="2">:
+          <input type="text" id="fn-seconds" class="form-control" name="fn-seconds" value="59" maxlength="2">
           <span class="units offset">hh:mm:ss</span>
         </div>
         
         <div class="form-group">
           <div class="col-sm-2 col-sm-offset-2">
-            <button type="submit" class="btn btn-default">Elapsed Time</button>
+            <input type="button" id="elapsed" class="btn btn-default" value="Elapsed Time">
           </div>
         </div>
 
@@ -77,9 +69,9 @@
  -->
           <div class="form-group time">
             <label class="col-sm-2 control-label">Elapsed Time</label>
-            <input type="number" class="form-control" name="hours" placeholder="9" min="0" max="23">:
-            <input type="number" class="form-control" name="minutes" placeholder="34" min="0" max="59">:
-            <input type="number" class="form-control" name="seconds" placeholder="59" min="0" max="59">
+            <input type="text" class="form-control" name="hours" value="9" min="0" max="23">:
+            <input type="text" class="form-control" name="minutes" value="34" min="0" max="59">:
+            <input type="text" class="form-control" name="seconds" value="59" min="0" max="59">
             <span class="units offset">hh:mm:ss</span>
           </div>
 
