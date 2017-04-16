@@ -70,11 +70,15 @@
         <!-- TIME -->
         <div class="form-group time">
           <label class="col-sm-2 control-label">Elapsed Time</label>
-          <input type="text" class="form-control" name="hours" placeholder="00" min="0" max="23">:
-          <input type="text" class="form-control" name="minutes" placeholder="00" min="0" max="59">:
-          <input type="text" class="form-control" name="seconds" placeholder="00" min="0" max="59">
+          <input type="text" class="form-control" name="hours" placeholder="00" disabled>:
+          <input type="text" class="form-control" name="minutes" placeholder="00" disabled>:
+          <input type="text" class="form-control" name="seconds" placeholder="00" disabled="">
           <span class="units offset">hh:mm:ss</span>
         </div>
+
+        <input type=number id="total_seconds" name="total_seconds" hidden >
+
+
         <!-- DISTANCE -->
         <div class="form-group calc">
           <label class="col-sm-2 control-label" for="distance">Distance</label>
