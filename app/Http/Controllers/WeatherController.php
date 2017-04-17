@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Events\WeatherApiCallEvent;
 
 class WeatherController extends Controller
 {
@@ -13,9 +14,11 @@ class WeatherController extends Controller
     public function show (Request $request) {
       $zip = $request->input('zip');
 
-      $weather_string = file_get_contents("http://api.openweathermap.org/data/2.5/weather?zip=" . $zip . ",us&units=imperial&appid=b28a4ed98cc99bf9618c6e8349ac831d");
+      $weather = file_get_contents("http://api.openweathermap.org/data/2.5/weather?zip=" . $zip . ",us&units=imperial&appid=b28a4ed98cc99bf9618c6e8349ac831d");
 
-      $conditions= json_decode($weather_string);
+      event(new WeatherApiCallEvent($this));
+
+      $conditions= json_decode($weather);
 
       $temp = $conditions->main->temp;
       $humidity = $conditions->main->humidity;
