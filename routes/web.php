@@ -19,4 +19,7 @@ Route::get('distance', 'TimeOnDistanceController@create')->name('tod');
 Route::post('distance', 'TimeOnDistanceController@store')->name('tod');
 
 Route::get('time', 'TimeOnTimeController@create')->name('tot');
-Route::post('time', 'TimeOnTimeController@create')->name('tot');
+Route::post('time', 'TimeOnTimeController@store')->name('tot');
+
+Route::get('weather', 'WeatherController@create')->name('weather');
+Route::post('weather', 'WeatherController@show')->name('weather');
