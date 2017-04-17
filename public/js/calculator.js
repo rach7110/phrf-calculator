@@ -24,7 +24,6 @@ $(document).ready(function() {
     $('[name="hours"]').val(elapsed_time.hours);
     $('#total_seconds').attr('value', elapsed_time.total);
 
-    console.log(typeof(elapsed_time.total));
   });
 });
 

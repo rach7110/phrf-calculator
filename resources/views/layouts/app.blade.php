@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
         <!-- JQuery -->
         <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
         <!-- External JavaScipt -->
@@ -42,6 +43,7 @@
               <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
               <li><a href="{{route('tod')}}">Time on Distance</a></li>
               <li><a href="{{route('tot')}}">Time on Time</a></li>
+              <li><a href="{{route('weather')}}">Current Weather</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->

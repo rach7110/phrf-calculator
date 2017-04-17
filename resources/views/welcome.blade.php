@@ -64,7 +64,7 @@
                 font-size: 12px;
                 font-weight: 600;
                 letter-spacing: .1rem;
-                text-decoration: none;
+                /*text-decoration: none;*/
                 text-transform: uppercase;
             }
 
@@ -95,7 +95,7 @@
                 </div>
 
                 <div class="links">
-                    <a class="btn btn-default" href="{{ route('tod')}}">Get Started</a>
+                    <a href="{{ route('tod')}}">Get Started</a>
                 </div>
             </div>
         </div>
