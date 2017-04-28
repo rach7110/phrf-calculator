@@ -14,7 +14,7 @@ class WeatherController extends Controller
     public function show (Request $request) {
       $zip = $request->input('zip');
 
-      $weather = file_get_contents("http://api.openweathermap.org/data/2.5/weather?zip=" . $zip . ",us&units=imperial&appid=b28a4ed98cc99bf9618c6e8349ac831d");
+      $weather = file_get_contents("http://api.openweathermap.org/data/2.5/weather?zip=" . $zip . ",us&units=imperial&appid=" . env('WEATHER_API_ID'));
 
       event(new WeatherApiCallEvent($this));
 
