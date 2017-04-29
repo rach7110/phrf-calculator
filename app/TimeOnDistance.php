@@ -4,10 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class TimeOnDistance extends Model
+class TimeOnDistance extends Model implements Phrf
 {
-    use Phrf; 
-
     protected $fillable = ['distance', 'rating', 'time_elapsed', 'corrected_time'];
 
     public function corrected_time() {

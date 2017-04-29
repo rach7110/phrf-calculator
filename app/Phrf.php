@@ -2,8 +2,8 @@
 
   namespace App;
 
-  trait Phrf {
+  Interface Phrf {
 
-    abstract public function corrected_time();
+    public function corrected_time();
 
   }

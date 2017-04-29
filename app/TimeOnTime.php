@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class TimeOnTime extends Model
+class TimeOnTime extends Model implements Phrf
 {
     protected $a_factor;
     protected $b_factor;
