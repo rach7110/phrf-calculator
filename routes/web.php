@@ -25,6 +25,7 @@ Route::post('time', 'TimeOnTimeController@store')->name('tot');
 Route::get('weather', 'WeatherController@create')->name('weather');
 Route::post('weather', 'WeatherController@show')->name('weather');
 
-// SCORING:
-Route::get('scores', 'PhrfScoreController@index')->name('scores');
+// RACES:
+Route::get('races', 'RaceController@index')->name('races');
+Route::get('races/create', 'RaceController@create')->name('races.create');
 
