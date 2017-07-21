@@ -7,11 +7,12 @@
 
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title">Time on Distance</h3>
+      <h3 class="panel-title">Time on Distance Handicap</h3>
     </div>
     <div class="panel-body">
       <h5>Description</h5>
-      <p>Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn. Lorem Ipsum đã được sử dụng như một văn bản chuẩn cho ngành công nghiệp in ấn từ những năm 1500, khi một họa sĩ vô danh ghép nhiều đoạn văn bản với nhau để tạo thành một bản mẫu văn bản. Đoạn văn bản này không những đã tồn tại năm thế kỉ, mà khi được áp dụng vào tin học văn phòng, nội dung của nó vẫn không hề bị thay đổi. Nó đã được phổ biến tron
+      <p>
+      The vast majority of handicap racing in North America is scored by the Time on Distance (TOD) method. A fixed time allowance, based on the length of the course, is used to compute the corrected time. And advantage of TOD is it is simple and you can tell exactly where you stand at any point in the race.
       </p>
 
       <!-- ELAPSED TIME -->
@@ -19,7 +20,8 @@
 
       <!-- TIME OF DISTANCE CALCULATOR: -->
       <hr>
-      <h5>Calculator</h5>
+      <h5 id="time-header">STEP 2:</h5>
+      <h5>Calculate Corrected Time</h5>
       <form class="form-horizontal" action="{{route('tod')}}" method="post">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <!-- TIME -->
@@ -51,7 +53,7 @@
 
         <div class="form-group">
           <div class="col-sm-2 col-sm-offset-2">
-            <button type="submit" class="btn btn-default">Calculate</button>
+            <button type="submit" class="btn btn-primary">Calculate</button>
           </div>
         </div>
 

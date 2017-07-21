@@ -1,7 +1,8 @@
 
 
   <hr>
-  <h5 id="time-header">Elapsed Time</h5>
+  <h5 id="time-header">STEP 1:</h5>
+  <h5 id="time-header">Determine Elapsed Time</h5>
   <p id="clock-info">24-hour Clock</p>
 
   <form class="form-horizontal">
@@ -25,7 +26,7 @@
 
     <div class="form-group">
       <div class="col-sm-2 col-sm-offset-2">
-        <input type="button" id="elapsed" class="btn btn-default" value="Elapsed Time">
+        <input type="button" id="elapsed" class="btn btn-primary" value="Elapsed Time">
 
       </div>
     </div>
