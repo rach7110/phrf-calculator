@@ -12,9 +12,9 @@ class TimeOnTime extends Model implements Phrf
   public $rating;
 
     public function corrected_time() {
-      $tcf = $this->a_factor / ($this->b_factor + $this->handicap);
+      $tcf = $this->a_factor / ($this->b_factor + $this->rating);
       $corrected_time = round($this->elapsed_time * $tcf, 2);
 
-      $this->setCorrectedTime($corrected_time);
+      return $corrected_time;
     }
 }
